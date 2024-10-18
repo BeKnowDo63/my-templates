@@ -31,11 +31,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/AdguardHome/config",
+					"bind": "/portainer/AdguardHome/config",
 					"container": "/opt/adguardhome/conf"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/AdguardHome/work",
+					"bind": "/portainer/AdguardHome/work",
 					"container": "/opt/adguardhome/work"
 				}
 			],
@@ -75,7 +75,7 @@
 				}
 			],
 			"image": "archivebox/archivebox:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png",
+			"logo": "",
 			"name": "archivebox",
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://archivebox.io/\" target=\"_blank\">https://archivebox.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/ArchiveBox/ArchiveBox/wiki/Docker\" target=\"_blank\">https://github.com/ArchiveBox/ArchiveBox/wiki/Docker</a><br><br><br>By default an admin user is not created. You can do so by launching a shell in the container and executing 'archivebox manage createsuperuser'. Documentation is Available <a href='https://github.com/ArchiveBox/ArchiveBox/wiki'>here</a>.",
 			"platform": "linux",
@@ -87,7 +87,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/archivebox",
+					"bind": "/portainer/archivebox",
 					"container": "/data"
 				}
 			]
@@ -107,7 +107,7 @@
 				}
 			],
 			"image": "authelia/authelia:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/authelia.png",
+			"logo": "",
 			"name": "authelia",
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.authelia.com/\" target=\"_blank\">https://www.authelia.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.authelia.com/docs/configuration/\" target=\"_blank\">https://www.authelia.com/docs/configuration/</a><br><br><br>Requires a configuration.yml file in order to work. Documentation is Available <a href='https://www.authelia.com/configuration/prologue/introduction/'>here</a>.",
 			"platform": "linux",
@@ -119,7 +119,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Authelia",
+					"bind": "/portainer/Authelia",
 					"container": "/etc/authelia/"
 				}
 			]
@@ -139,7 +139,7 @@
 				}
 			],
 			"image": "ubuntu/bind9:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/bind9.png",
+			"logo": "",
 			"name": "bind9",
 			"platform": "linux",
 			"ports": [
@@ -151,15 +151,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/bind9/named.conf",
+					"bind": "/portainer/bind9/named.conf",
 					"container": "etc/bind/named.conf"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/bind9/cache",
+					"bind": "/portainer/bind9/cache",
 					"container": "/var/cache/bind"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/bind9/bind",
+					"bind": "/portainer/bind9/bind",
 					"container": "/var/lib/bind"
 				}
 			],
@@ -187,15 +187,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Caddy/Data",
+					"bind": "/portainer/Caddy/Data",
 					"container": "/data"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Caddy/Config",
+					"bind": "/portainer/Caddy/Config",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Caddy/Caddyfile",
+					"bind": "/portainer/Caddy/Caddyfile",
 					"container": "/etc/caddy/Caddyfile"
 				}
 			]
@@ -287,11 +287,11 @@
 					"container": "/etc/localtime"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/clamav/config",
+					"bind": "/portainer/clamav/config",
 					"container": "/etc/clamav"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/clamav/virus_definitions",
+					"bind": "/portainer/clamav/virus_definitions",
 					"container": "/var/lib/clamav"
 				}
 			],
@@ -388,7 +388,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Code-Server",
+					"bind": "/portainer/Code-Server",
 					"container": "/config"
 				}
 			],
@@ -413,7 +413,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/DeeMix",
+					"bind": "/portainer/DeeMix",
 					"container": "/config"
 				},
 				{
@@ -465,15 +465,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/eclipse-mosquitto/config",
+					"bind": "/portainer/eclipse-mosquitto/config",
 					"container": "/mosquitto/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/eclipse-mosquitto/data",
+					"bind": "/portainer/eclipse-mosquitto/data",
 					"container": "/mosquitto/data"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/eclipse-mosquitto/log",
+					"bind": "/portainer/eclipse-mosquitto/log",
 					"container": "/mosquitto/log"
 				}
 			],
@@ -502,11 +502,11 @@
 					"container": "/srv"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/filebrowser/filebrowser.db",
+					"bind": "/portainer/filebrowser/filebrowser.db",
 					"container": "/database/filebrowser.db"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/filebrowser/settings.json",
+					"bind": "/portainer/filebrowser/settings.json",
 					"container": "/config/settings.json"
 				}
 			]
@@ -546,11 +546,11 @@
 					"container": "/srv"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/filebrowser/filebrowser.db",
+					"bind": "/portainer/filebrowser/filebrowser.db",
 					"container": "/database/filebrowser.db"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/filebrowser/settings.json",
+					"bind": "/portainer/filebrowser/settings.json",
 					"container": "/config/settings.json"
 				}
 			]
@@ -580,7 +580,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Flame/data",
+					"bind": "/portainer/Flame/data",
 					"container": "/app/data"
 				},
 				{
@@ -679,7 +679,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Domoticz",
+					"bind": "/portainer/Domoticz",
 					"container": "/config"
 				}
 			],
@@ -770,15 +770,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/eclipse-mosquitto/config",
+					"bind": "/portainer/eclipse-mosquitto/config",
 					"container": "/mosquitto/config"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/eclipse-mosquitto/data",
+					"bind": "/portainer/eclipse-mosquitto/data",
 					"container": "/mosquitto/data"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/eclipse-mosquitto/log",
+					"bind": "/portainer/eclipse-mosquitto/log",
 					"container": "/mosquitto/log"
 				}
 			],
@@ -814,7 +814,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Ghost",
+					"bind": "/portainer/Ghost",
 					"container": "/var/lib/ghost/content"
 				}
 			],
@@ -873,7 +873,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Heimdall",
+					"bind": "/portainer/Heimdall",
 					"container": "/config"
 				}
 			],
@@ -915,7 +915,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/gotify",
+					"bind": "/portainer/gotify",
 					"container": "/app/data"
 				}
 			]
@@ -964,7 +964,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/homebridge",
+					"bind": "/portainer/homebridge",
 					"container": "/homebridge"
 				}
 			]
@@ -1013,7 +1013,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/debian-homebridge",
+					"bind": "/portainer/debian-homebridge",
 					"container": "/homebridge"
 				}
 			]
@@ -1038,11 +1038,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Influxdb/data",
+					"bind": "/portainer/Influxdb/data",
 					"container": "/var/lib/influxdb"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/Influxdb/config",
+					"bind": "/portainer/Influxdb/config",
 					"container": "/etc/influxdb"
 				}
 			]
@@ -1094,11 +1094,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Influxdb2/data",
+					"bind": "/portainer/Influxdb2/data",
 					"container": "/var/lib/influxdb2"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/Influxdb2/config",
+					"bind": "/portainer/Influxdb2/config",
 					"container": "/etc/influxdb2"
 				}
 			]
@@ -1200,7 +1200,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Lychee",
+					"bind": "/portainer/Lychee",
 					"container": "/config"
 				},
 				{
@@ -1315,7 +1315,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/MinIO",
+					"bind": "/portainer/Config/MinIO",
 					"container": "/data"
 				}
 			],
@@ -1371,7 +1371,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Mariadb",
+					"bind": "/portainer/Mariadb",
 					"container": "/config"
 				}
 			],
@@ -1395,7 +1395,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Memos",
+					"bind": "/portainer/Memos",
 					"container": "/var/opt/memos"
 				}
 			],
@@ -1441,7 +1441,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/MySQL",
+					"bind": "/portainer/MySQL",
 					"container": "/var/lib/mysql"
 				}
 			],
@@ -1483,7 +1483,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/n8n",
+					"bind": "/portainer/n8n",
 					"container": "/home/node/.n8n"
 				}
 			]
@@ -1519,11 +1519,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/netdata/netdataconfig",
+					"bind": "/portainer/netdata/netdataconfig",
 					"container": "/etc/netdata"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/netdata/netdatalib",
+					"bind": "/portainer/netdata/netdatalib",
 					"container": "/var/lib/netdata"
 				},
 				{
@@ -1579,7 +1579,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Nginx",
+					"bind": "/portainer/Nginx",
 					"container": "/config"
 				}
 			],
@@ -1687,11 +1687,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/nginx-proxy-manager/data",
+					"bind": "/portainer/nginx-proxy-manager/data",
 					"container": "/data"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/nginx-proxy-manager/letsencrypt",
+					"bind": "/portainer/nginx-proxy-manager/letsencrypt",
 					"container": "/etc/letsencrypt"
 				}
 			],
@@ -1891,7 +1891,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Organizr",
+					"bind": "/portainer/Organizr",
 					"container": "/config"
 				}
 			],
@@ -2011,7 +2011,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/pgadmin",
+					"bind": "/portainer/pgadmin",
 					"container": "/var/lib/pgadmin"
 				}
 			],
@@ -2128,11 +2128,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/PiHole",
+					"bind": "/portainer/PiHole",
 					"container": "/etc/pihole"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/PiHole/DNS",
+					"bind": "/portainer/PiHole/DNS",
 					"container": "/etc/dnsmasq.d"
 				}
 			]
@@ -2160,11 +2160,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/PiHole_DoH-DoT",
+					"bind": "/portainer/PiHole_DoH-DoT",
 					"container": "/etc/pihole"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/PiHole_DoH-DoT/DNS",
+					"bind": "/portainer/PiHole_DoH-DoT/DNS",
 					"container": "/etc/dnsmasq.d"
 				}
 			]
@@ -2231,11 +2231,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/PiHole-Unbound",
+					"bind": "/portainer/PiHole-Unbound",
 					"container": "/etc/pihole"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/PiHole-Unbound/DNS",
+					"bind": "/portainer/PiHole-Unbound/DNS",
 					"container": "/etc/dnsmasq.d"
 				}
 			]
@@ -2280,7 +2280,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/PostgreSQL",
+					"bind": "/portainer/PostgreSQL",
 					"container": "/var/lib/postgresql/data"
 				}
 			],
@@ -2343,7 +2343,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/PiWigo",
+					"bind": "/portainer/PiWigo",
 					"container": "/config"
 				}
 			],
@@ -2451,7 +2451,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/rustdesk",
+					"bind": "/portainer/rustdesk",
 					"container": "/data"
 				}
 			]
@@ -2549,11 +2549,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Smokeping",
+					"bind": "/portainer/Smokeping",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Smokeping",
+					"bind": "/portainer/Smokeping",
 					"container": "/data"
 				}
 			],
@@ -2589,7 +2589,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/searxng",
+					"bind": "/portainer/searxng",
 					"container": "/etc/searxng"
 				}
 			],
@@ -2619,7 +2619,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/tailscale",
+					"bind": "/portainer/tailscale",
 					"container": "/var/lib/tailscale"
 				},
 				{
@@ -2647,7 +2647,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Shiori",
+					"bind": "/portainer/Shiori",
 					"container": "/srv/shiori"
 				}
 			],
@@ -2672,7 +2672,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Snippet-box",
+					"bind": "/portainer/Snippet-box",
 					"container": "/app/data"
 				}
 			]
@@ -2703,7 +2703,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/speedtest-tracker",
+					"bind": "/portainer/speedtest-tracker",
 					"container": "/config"
 				}
 			],
@@ -2731,15 +2731,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/traefik/traefik.yml",
+					"bind": "/portainer/traefik/traefik.yml",
 					"container": "/traefik.yml"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/traefik/config.yml",
+					"bind": "/portainer/traefik/config.yml",
 					"container": "/config.yml"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/traefik/acme.json",
+					"bind": "/portainer/traefik/acme.json",
 					"container": "/acme.json"
 				},
 				{
@@ -2813,7 +2813,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/transmission-openvpn",
+					"bind": "/portainer/transmission-openvpn",
 					"container": "/config"
 				},
 				{
@@ -2891,7 +2891,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/transmission-openvpn",
+					"bind": "/portainer/transmission-openvpn",
 					"container": "/config"
 				},
 				{
@@ -2933,15 +2933,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/unmanic/config",
+					"bind": "/portainer/unmanic/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/unmanic/library",
+					"bind": "/portainer/unmanic/library",
 					"container": "/library"
 				},
 				{
-					"bind": "/home/kevin/Documents/Portainer/unmanic/tmp",
+					"bind": "/portainer/unmanic/tmp",
 					"container": "/tmp/unmanic"
 				}
 			],
@@ -2977,7 +2977,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/urbackup",
+					"bind": "/portainer/urbackup",
 					"container": "/var/urbackup"
 				},
 				{
@@ -3007,7 +3007,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/home/kevin/Documents/Portainer/Bitwarden",
+					"bind": "/portainer/Bitwarden",
 					"container": "/data"
 				}
 			]
